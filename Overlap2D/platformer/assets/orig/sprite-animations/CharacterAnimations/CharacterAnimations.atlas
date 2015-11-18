@@ -1,0 +1,328 @@
+
+CharacterAnimations.png
+size: 392,392
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+fly0001
+  rotate: false
+  xy: 1, 81
+  size: 44, 38
+  orig: 44, 38
+  offset: 0, 0
+  index: -1
+fly0002
+  rotate: false
+  xy: 1, 41
+  size: 44, 38
+  orig: 44, 38
+  offset: 0, 0
+  index: -1
+fly0003
+  rotate: false
+  xy: 47, 81
+  size: 44, 38
+  orig: 44, 38
+  offset: 0, 0
+  index: -1
+fly0004
+  rotate: false
+  xy: 1, 1
+  size: 44, 38
+  orig: 44, 38
+  offset: 0, 0
+  index: -1
+fly0005
+  rotate: false
+  xy: 47, 41
+  size: 44, 38
+  orig: 44, 38
+  offset: 0, 0
+  index: -1
+Jump0006
+  rotate: false
+  xy: 93, 82
+  size: 44, 37
+  orig: 44, 37
+  offset: 0, 0
+  index: -1
+run'n'gun0007
+  rotate: false
+  xy: 139, 83
+  size: 45, 36
+  orig: 45, 36
+  offset: 0, 0
+  index: -1
+run'n'gun0008
+  rotate: false
+  xy: 186, 83
+  size: 45, 36
+  orig: 45, 36
+  offset: 0, 0
+  index: -1
+run'n'gun0009
+  rotate: false
+  xy: 233, 83
+  size: 45, 36
+  orig: 45, 36
+  offset: 0, 0
+  index: -1
+run'n'gun0010
+  rotate: false
+  xy: 280, 83
+  size: 45, 36
+  orig: 45, 36
+  offset: 0, 0
+  index: -1
+run'n'gun0011
+  rotate: false
+  xy: 327, 83
+  size: 45, 36
+  orig: 45, 36
+  offset: 0, 0
+  index: -1
+run'n'gun0012
+  rotate: false
+  xy: 374, 83
+  size: 45, 36
+  orig: 45, 36
+  offset: 0, 0
+  index: -1
+run'n'gun0013
+  rotate: false
+  xy: 421, 83
+  size: 45, 36
+  orig: 45, 36
+  offset: 0, 0
+  index: -1
+run'n'gun0014
+  rotate: false
+  xy: 468, 83
+  size: 45, 36
+  orig: 45, 36
+  offset: 0, 0
+  index: -1
+JumpShoot0015
+  rotate: false
+  xy: 47, 3
+  size: 44, 36
+  orig: 44, 36
+  offset: 0, 0
+  index: -1
+JumpShoot0016
+  rotate: false
+  xy: 93, 44
+  size: 44, 36
+  orig: 44, 36
+  offset: 0, 0
+  index: -1
+JumpShoot0017
+  rotate: false
+  xy: 139, 45
+  size: 44, 36
+  orig: 44, 36
+  offset: 0, 0
+  index: -1
+JumpShoot0018
+  rotate: false
+  xy: 515, 83
+  size: 44, 36
+  orig: 44, 36
+  offset: 0, 0
+  index: -1
+JumpShoot0019
+  rotate: false
+  xy: 93, 6
+  size: 44, 36
+  orig: 44, 36
+  offset: 0, 0
+  index: -1
+JumpShoot0020
+  rotate: false
+  xy: 139, 7
+  size: 44, 36
+  orig: 44, 36
+  offset: 0, 0
+  index: -1
+JumpShoot0021
+  rotate: false
+  xy: 185, 45
+  size: 44, 36
+  orig: 44, 36
+  offset: 0, 0
+  index: -1
+Runw'gun0022
+  rotate: false
+  xy: 561, 83
+  size: 44, 36
+  orig: 44, 36
+  offset: 0, 0
+  index: -1
+Runw'gun0023
+  rotate: false
+  xy: 185, 7
+  size: 44, 36
+  orig: 44, 36
+  offset: 0, 0
+  index: -1
+Runw'gun0024
+  rotate: false
+  xy: 231, 45
+  size: 44, 36
+  orig: 44, 36
+  offset: 0, 0
+  index: -1
+Runw'gun0025
+  rotate: false
+  xy: 607, 83
+  size: 44, 36
+  orig: 44, 36
+  offset: 0, 0
+  index: -1
+Runw'gun0026
+  rotate: false
+  xy: 231, 7
+  size: 44, 36
+  orig: 44, 36
+  offset: 0, 0
+  index: -1
+Runw'gun0027
+  rotate: false
+  xy: 277, 45
+  size: 44, 36
+  orig: 44, 36
+  offset: 0, 0
+  index: -1
+Runw'gun0028
+  rotate: false
+  xy: 653, 83
+  size: 44, 36
+  orig: 44, 36
+  offset: 0, 0
+  index: -1
+Runw'gun0029
+  rotate: false
+  xy: 277, 7
+  size: 44, 36
+  orig: 44, 36
+  offset: 0, 0
+  index: -1
+death0030
+  rotate: false
+  xy: 323, 46
+  size: 44, 35
+  orig: 44, 35
+  offset: 0, 0
+  index: -1
+death0031
+  rotate: false
+  xy: 699, 84
+  size: 44, 35
+  orig: 44, 35
+  offset: 0, 0
+  index: -1
+death0032
+  rotate: false
+  xy: 323, 9
+  size: 44, 35
+  orig: 44, 35
+  offset: 0, 0
+  index: -1
+death0033
+  rotate: false
+  xy: 369, 46
+  size: 44, 35
+  orig: 44, 35
+  offset: 0, 0
+  index: -1
+death0034
+  rotate: false
+  xy: 745, 84
+  size: 44, 35
+  orig: 44, 35
+  offset: 0, 0
+  index: -1
+death0035
+  rotate: false
+  xy: 369, 9
+  size: 44, 35
+  orig: 44, 35
+  offset: 0, 0
+  index: -1
+death0036
+  rotate: false
+  xy: 415, 46
+  size: 44, 35
+  orig: 44, 35
+  offset: 0, 0
+  index: -1
+death0037
+  rotate: false
+  xy: 791, 84
+  size: 44, 35
+  orig: 44, 35
+  offset: 0, 0
+  index: -1
+death0038
+  rotate: false
+  xy: 415, 9
+  size: 44, 35
+  orig: 44, 35
+  offset: 0, 0
+  index: -1
+Stand0039
+  rotate: false
+  xy: 461, 46
+  size: 44, 35
+  orig: 44, 35
+  offset: 0, 0
+  index: -1
+StandShoot0040
+  rotate: false
+  xy: 837, 84
+  size: 44, 35
+  orig: 44, 35
+  offset: 0, 0
+  index: -1
+StandShoot0041
+  rotate: false
+  xy: 461, 9
+  size: 44, 35
+  orig: 44, 35
+  offset: 0, 0
+  index: -1
+StandShoot0042
+  rotate: false
+  xy: 507, 46
+  size: 44, 35
+  orig: 44, 35
+  offset: 0, 0
+  index: -1
+StandShoot0043
+  rotate: false
+  xy: 883, 84
+  size: 44, 35
+  orig: 44, 35
+  offset: 0, 0
+  index: -1
+StandShoot0044
+  rotate: false
+  xy: 507, 9
+  size: 44, 35
+  orig: 44, 35
+  offset: 0, 0
+  index: -1
+StandShoot0045
+  rotate: false
+  xy: 553, 46
+  size: 44, 35
+  orig: 44, 35
+  offset: 0, 0
+  index: -1
+StandShoot0046
+  rotate: false
+  xy: 929, 84
+  size: 44, 35
+  orig: 44, 35
+  offset: 0, 0
+  index: -1

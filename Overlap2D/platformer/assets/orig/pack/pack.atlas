@@ -1,0 +1,552 @@
+
+pack.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+AButton (1)
+  rotate: false
+  xy: 1196, 19
+  size: 60, 33
+  split: 0, 0, 0, 0
+  orig: 60, 33
+  offset: 0, 0
+  index: -1
+AlienBigGrass
+  rotate: false
+  xy: 1892, 762
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+AlienFirepit
+  rotate: false
+  xy: 1485, 20
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+AlienFlower
+  rotate: false
+  xy: 1974, 728
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+AlienTree
+  rotate: false
+  xy: 1896, 970
+  size: 150, 140
+  split: 0, 0, 94, 29
+  orig: 150, 140
+  offset: 0, 0
+  index: -1
+AlienTree
+  rotate: false
+  xy: 1896, 970
+  size: 150, 140
+  orig: 150, 140
+  offset: 0, 0
+  index: -1
+AlienTree2
+  rotate: false
+  xy: 1896, 828
+  size: 150, 140
+  split: 0, 0, 100, 28
+  orig: 150, 140
+  offset: 0, 0
+  index: -1
+AlienTree2
+  rotate: false
+  xy: 1896, 828
+  size: 150, 140
+  orig: 150, 140
+  offset: 0, 0
+  index: -1
+Alienbush
+  rotate: false
+  xy: 1958, 762
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+Aliengrass
+  rotate: false
+  xy: 1702, 1378
+  size: 150, 20
+  orig: 150, 20
+  offset: 0, 0
+  index: -1
+Asteroid
+  rotate: false
+  xy: 1928, 1121
+  size: 92, 76
+  orig: 92, 76
+  offset: 0, 0
+  index: -1
+BButton
+  rotate: false
+  xy: 1258, 19
+  size: 60, 33
+  split: 0, 0, 0, 0
+  orig: 60, 33
+  offset: 0, 0
+  index: -1
+BeginButton
+  rotate: false
+  xy: 1747, 738
+  size: 32, 16
+  orig: 32, 16
+  offset: 0, 0
+  index: -1
+Black
+  rotate: false
+  xy: 1670, 886
+  size: 224, 224
+  orig: 224, 224
+  offset: 0, 0
+  index: -1
+Black (1)
+  rotate: false
+  xy: 2, 56
+  size: 960, 960
+  orig: 960, 960
+  offset: 0, 0
+  index: -1
+Cloud
+  rotate: false
+  xy: 1585, 2
+  size: 64, 64
+  split: 27, 14, 21, 36
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+Cloud
+  rotate: false
+  xy: 1585, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+Done
+  rotate: false
+  xy: 1196, 5
+  size: 60, 12
+  orig: 60, 12
+  offset: 0, 0
+  index: -1
+Game over
+  rotate: false
+  xy: 1670, 756
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+Goldprogress
+  rotate: false
+  xy: 964, 914
+  size: 30, 102
+  split: 9, 9, 9, 9
+  orig: 30, 102
+  offset: 0, 0
+  index: -1
+Gray
+  rotate: false
+  xy: 1702, 1722
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+Green
+  rotate: false
+  xy: 1028, 1370
+  size: 672, 672
+  orig: 672, 672
+  offset: 0, 0
+  index: -1
+GroundTexture
+  rotate: false
+  xy: 1747, 728
+  size: 64, 8
+  split: 0, 0, 0, 0
+  orig: 64, 8
+  offset: 0, 0
+  index: -1
+Health
+  rotate: false
+  xy: 1892, 742
+  size: 75, 18
+  split: 0, 0, 0, 0
+  orig: 75, 18
+  offset: 0, 0
+  index: -1
+Health (4)
+  rotate: false
+  xy: 151, 4
+  size: 75, 18
+  orig: 75, 18
+  offset: 0, 0
+  index: -1
+Health (5)
+  rotate: false
+  xy: 361, 36
+  size: 75, 18
+  orig: 75, 18
+  offset: 0, 0
+  index: -1
+Health (6)
+  rotate: false
+  xy: 1670, 736
+  size: 75, 18
+  orig: 75, 18
+  offset: 0, 0
+  index: -1
+Hearts1
+  rotate: false
+  xy: 1731, 1370
+  size: 25, 6
+  split: 0, 0, 0, 0
+  orig: 25, 6
+  offset: 0, 0
+  index: -1
+How to play
+  rotate: false
+  xy: 2, 4
+  size: 147, 18
+  orig: 147, 18
+  offset: 0, 0
+  index: -1
+HowtoPlay
+  rotate: false
+  xy: 1606, 68
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Jumpw-Gun
+  rotate: false
+  xy: 1783, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+Left Arrow
+  rotate: false
+  xy: 1382, 19
+  size: 60, 33
+  split: 0, 0, 0, 0
+  orig: 60, 33
+  offset: 0, 0
+  index: -1
+Left Arrow (1)
+  rotate: false
+  xy: 1320, 19
+  size: 60, 33
+  orig: 60, 33
+  offset: 0, 0
+  index: -1
+LightPillar
+  rotate: false
+  xy: 1028, 728
+  size: 640, 640
+  split: 450, 166, 227, 313
+  pad: 578, 61, 134, 252
+  orig: 640, 640
+  offset: 0, 0
+  index: -1
+OptionsButton
+  rotate: false
+  xy: 1854, 1382
+  size: 64, 16
+  orig: 64, 16
+  offset: 0, 0
+  index: -1
+Pillar1
+  rotate: false
+  xy: 964, 86
+  size: 640, 640
+  split: 126, 226, 208, 111
+  pad: -1, -1, 209, 110
+  orig: 640, 640
+  offset: 0, 0
+  index: -1
+Pressed
+  rotate: false
+  xy: 1702, 1370
+  size: 27, 6
+  orig: 27, 6
+  offset: 0, 0
+  index: -1
+PressedBegin
+  rotate: false
+  xy: 224, 24
+  size: 135, 30
+  orig: 135, 30
+  offset: 0, 0
+  index: -1
+RegPlatform (4)
+  rotate: false
+  xy: 1196, 54
+  size: 150, 30
+  split: 0, 0, 0, 0
+  orig: 150, 30
+  offset: 0, 0
+  index: -1
+RegularPlatform
+  rotate: false
+  xy: 1702, 1400
+  size: 320, 320
+  split: 108, 109, 58, 260
+  pad: 46, 273, 61, 184
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+RightArrow
+  rotate: false
+  xy: 438, 21
+  size: 60, 33
+  split: 0, 0, 0, 0
+  orig: 60, 33
+  offset: 0, 0
+  index: -1
+Rocketcrash
+  rotate: false
+  xy: 1606, 326
+  size: 400, 400
+  split: 0, 0, 0, 0
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+SmallSlash
+  rotate: false
+  xy: 1670, 1112
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TitleScreen
+  rotate: false
+  xy: 2, 1018
+  size: 1024, 1024
+  orig: 1024, 1024
+  offset: 0, 0
+  index: -1
+UnPressed
+  rotate: false
+  xy: 1670, 728
+  size: 27, 6
+  orig: 27, 6
+  offset: 0, 0
+  index: -1
+UnPressedBegin
+  rotate: false
+  xy: 1348, 54
+  size: 135, 30
+  split: 0, 0, 0, 0
+  orig: 135, 30
+  offset: 0, 0
+  index: -1
+ball
+  rotate: false
+  xy: 1800, 804
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+btn
+  rotate: false
+  xy: 1882, 832
+  size: 12, 52
+  split: 4, 5, 6, 7
+  orig: 12, 52
+  offset: 0, 0
+  index: -1
+btnPressed
+  rotate: false
+  xy: 2024, 1996
+  size: 12, 46
+  split: 4, 5, 4, 5
+  orig: 12, 46
+  offset: 0, 0
+  index: -1
+float soil
+  rotate: false
+  xy: 1864, 164
+  size: 160, 160
+  split: 0, 0, 0, 0
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+float soil
+  rotate: false
+  xy: 1864, 164
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+grass
+  rotate: false
+  xy: 1651, 2
+  size: 64, 64
+  split: 0, 0, 0, 0
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+grasspuff
+  rotate: false
+  xy: 1717, 2
+  size: 64, 64
+  split: 0, 0, 0, 0
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+item1
+  rotate: false
+  xy: 1928, 1199
+  size: 93, 199
+  split: 0, 93, 92, 95
+  orig: 93, 199
+  offset: 0, 0
+  index: -1
+left1
+  rotate: false
+  xy: 2026, 815
+  size: 20, 11
+  orig: 20, 11
+  offset: 0, 0
+  index: -1
+left2
+  rotate: false
+  xy: 964, 901
+  size: 20, 11
+  orig: 20, 11
+  offset: 0, 0
+  index: -1
+paltform1
+  rotate: false
+  xy: 964, 4
+  size: 230, 80
+  split: 112, 109, 49, 28
+  orig: 230, 80
+  offset: 0, 0
+  index: -1
+paltform2
+  rotate: false
+  xy: 2, 24
+  size: 220, 30
+  split: 0, 0, 0, 0
+  orig: 220, 30
+  offset: 0, 0
+  index: -1
+puddle
+  rotate: false
+  xy: 1800, 738
+  size: 90, 64
+  orig: 90, 64
+  offset: 0, 0
+  index: -1
+retry (1)
+  rotate: false
+  xy: 1892, 728
+  size: 80, 12
+  split: 0, 0, 0, 0
+  orig: 80, 12
+  offset: 0, 0
+  index: -1
+rock
+  rotate: false
+  xy: 1551, 52
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+soil cliff
+  rotate: false
+  xy: 1864, 2
+  size: 160, 160
+  split: 0, 0, 0, 0
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+soil cliff
+  rotate: false
+  xy: 1864, 2
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+
+pack2.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Pillar2
+  rotate: false
+  xy: 2, 294
+  size: 640, 640
+  split: 165, 220, 304, 235
+  pad: -1, -1, 305, 235
+  orig: 640, 640
+  offset: 0, 0
+  index: -1
+SmallRun
+  rotate: false
+  xy: 2, 164
+  size: 512, 128
+  orig: 512, 128
+  offset: 0, 0
+  index: -1
+Standw-Gun
+  rotate: false
+  xy: 516, 228
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+Winanimation
+  rotate: false
+  xy: 1286, 164
+  size: 384, 384
+  orig: 384, 384
+  offset: 0, 0
+  index: -1
+bush
+  rotate: false
+  xy: 1672, 742
+  size: 192, 192
+  split: 0, 0, 0, 0
+  orig: 192, 192
+  offset: 0, 0
+  index: -1
+soil
+  rotate: false
+  xy: 2, 2
+  size: 160, 160
+  split: 0, 0, 0, 0
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+soil
+  rotate: false
+  xy: 2, 2
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+tree
+  rotate: false
+  xy: 644, 294
+  size: 640, 640
+  split: 121, 50, 373, 167
+  orig: 640, 640
+  offset: 0, 0
+  index: -1
+tree (1)
+  rotate: false
+  xy: 1286, 550
+  size: 384, 384
+  split: 0, 0, 227, 79
+  orig: 384, 384
+  offset: 0, 0
+  index: -1
