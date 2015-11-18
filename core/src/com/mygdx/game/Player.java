@@ -11,11 +11,13 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.RayCastCallback;
 import com.badlogic.gdx.physics.box2d.World;
+import com.uwsoft.editor.renderer.SceneLoader;
 import com.uwsoft.editor.renderer.components.DimensionsComponent;
 import com.uwsoft.editor.renderer.components.TransformComponent;
 import com.uwsoft.editor.renderer.components.sprite.SpriteAnimationComponent;
 import com.uwsoft.editor.renderer.components.sprite.SpriteAnimationStateComponent;
 import com.uwsoft.editor.renderer.physics.PhysicsBodyLoader;
+import com.uwsoft.editor.renderer.scene2d.CompositeActor;
 import com.uwsoft.editor.renderer.scripts.IScript;
 import com.uwsoft.editor.renderer.utils.ComponentRetriever;
 
@@ -41,7 +43,7 @@ public class Player implements IScript {
     private static boolean jump = false;
     private static boolean shoot = false;
     private static boolean dead = false;
-
+    private  Health health;
     private int jumps = 0;
 
     private World world;
@@ -130,6 +132,7 @@ public class Player implements IScript {
         speed.y += gravity*delta;
         transformComponent.y += speed.y * delta;
         rayCast();
+        checkForBodyCollision();
     }
 
     //called when buttons in uiStage are pressed
@@ -140,6 +143,31 @@ public class Player implements IScript {
     public boolean getShoot(){
         return shoot;
     }
+
+
+    private void checkForBodyCollision(){
+        float rayGap = (dimensionsComponent.width) / 2;
+        float raySize = 2;
+
+        if(speed.x > 0) return;
+
+        Vector2 rayFrom = new Vector2((transformComponent.y + (dimensionsComponent.height/2)) * PhysicsBodyLoader.getScale(),
+                (transformComponent.y + rayGap) * PhysicsBodyLoader.getScale());
+
+        Vector2 rayTo = new Vector2((transformComponent.y + dimensionsComponent.height/2) * PhysicsBodyLoader.getScale(),
+                (transformComponent.y - raySize)* PhysicsBodyLoader.getScale());
+
+        world.rayCast(new RayCastCallback() {
+            @Override
+            public float reportRayFixture(Fixture fixture, Vector2 point, Vector2 normal, float fraction) {
+                speed.x = 0;
+                transformComponent.x = point.x / PhysicsBodyLoader.getScale() + 0.01f;
+                return 0;
+            }
+        }, rayFrom, rayTo);
+
+    }
+
 
     private void rayCast() {
         float rayGap = (dimensionsComponent.height) / 2;
@@ -194,4 +222,17 @@ public class Player implements IScript {
     public void dispose() {
 
     }
+
+    public Health getHealthManager(){
+        if(this.health == null){
+            throw new UnsupportedOperationException("Player does not have a health component.");
+        }
+        return this.health;
+    }
+
+    public void setHealthManager(Health health){
+        this.health = health;
+    }
+
+
 }

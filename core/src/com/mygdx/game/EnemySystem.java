@@ -3,9 +3,15 @@ package com.mygdx.game;
 import com.badlogic.ashley.core.*;
 import com.badlogic.ashley.systems.IteratingSystem;
 import com.badlogic.ashley.utils.ImmutableArray;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
+import com.badlogic.gdx.physics.box2d.Fixture;
+import com.badlogic.gdx.physics.box2d.RayCastCallback;
+import com.badlogic.gdx.physics.box2d.World;
+import com.uwsoft.editor.renderer.SceneLoader;
+import com.uwsoft.editor.renderer.components.DimensionsComponent;
 import com.uwsoft.editor.renderer.components.TransformComponent;
 import com.uwsoft.editor.renderer.components.physics.PhysicsBodyComponent;
 import com.uwsoft.editor.renderer.physics.PhysicsBodyLoader;
@@ -18,15 +24,20 @@ public class EnemySystem extends EntitySystem { // this class is in charge of Ar
 
     private Player player;
     private EnemyComponent enemyComponent;
-    private Vector2 speed;
     private Engine engine;
     private ImmutableArray<Entity> entities;
+    private World world;
+    private boolean grounded = false;
+    private Vector2 speed;
+    private float gravity = -320f;
 
-    public EnemySystem(Engine engine, Player player){
+
+    public EnemySystem(SceneLoader sceneLoader, Player player){
 
         this.player = player;
         speed = new Vector2(22,0);
-        this.engine = engine;
+        this.engine = sceneLoader.getEngine();
+        this.world = sceneLoader.world;
         entities = engine.getEntitiesFor(Family.all(EnemyComponent.class).get());
 
     }
@@ -70,10 +81,69 @@ public class EnemySystem extends EntitySystem { // this class is in charge of Ar
                 transformComponent.x = (enemyComponent.originalPosition.x +
                         MathUtils.sin(enemyComponent.timePassed * MathUtils.degreesToRadians * 20f) * 20f);
             }
+            speed.y += gravity * deltaTime;
+            transformComponent.y += speed.y * deltaTime;
+
+            rayCast(entity);
+            checkForBodyCollision(entity);
+
         }
 
 
     }
 
+    private void rayCast(Entity entity) {
+        final TransformComponent transformComponent = ComponentRetriever.get(entity, TransformComponent.class);
+        final DimensionsComponent dimensionsComponent = ComponentRetriever.get(entity, DimensionsComponent.class);
+        float rayGap = (dimensionsComponent.height) / 2;
+
+        float raySize = -(speed.y+ Gdx.graphics.getDeltaTime())*Gdx.graphics.getDeltaTime();
+
+        System.out.println(speed.y);
+        if(speed.y > 0) return;
+
+        Vector2 rayFrom = new Vector2((transformComponent.x + (dimensionsComponent.width/2)) * PhysicsBodyLoader.getScale(),
+                (transformComponent.y + rayGap) * PhysicsBodyLoader.getScale());
+
+        Vector2 rayTo = new Vector2((transformComponent.x + dimensionsComponent.width/2) * PhysicsBodyLoader.getScale(),
+                (transformComponent.y - raySize)* PhysicsBodyLoader.getScale());
+
+        world.rayCast(new RayCastCallback() {
+            @Override
+            public float reportRayFixture(Fixture fixture, Vector2 point, Vector2 normal, float fraction) {
+                speed.y = 0;
+                transformComponent.y = point.y / PhysicsBodyLoader.getScale() + 0.01f;
+                grounded = true;
+                return 0;
+            }
+        }, rayFrom, rayTo);
+
+    }
+
+    private void checkForBodyCollision(Entity entity){
+        final TransformComponent transformComponent = ComponentRetriever.get(entity, TransformComponent.class);
+        final DimensionsComponent dimensionsComponent = ComponentRetriever.get(entity, DimensionsComponent.class);
+
+        float rayGap = (dimensionsComponent.width) / 2;
+        float raySize = 2;
+
+        if(speed.x > 0) return;
+
+        Vector2 rayFrom = new Vector2((transformComponent.y + (dimensionsComponent.height/2)) * PhysicsBodyLoader.getScale(),
+                (transformComponent.y + rayGap) * PhysicsBodyLoader.getScale());
+
+        Vector2 rayTo = new Vector2((transformComponent.y + dimensionsComponent.height/2) * PhysicsBodyLoader.getScale(),
+                (transformComponent.y - raySize)* PhysicsBodyLoader.getScale());
+
+        world.rayCast(new RayCastCallback() {
+            @Override
+            public float reportRayFixture(Fixture fixture, Vector2 point, Vector2 normal, float fraction) {
+                speed.x = 0;
+                transformComponent.x = point.x / PhysicsBodyLoader.getScale() + 0.01f;
+                return 0;
+            }
+        }, rayFrom, rayTo);
+
+    }
 
 }

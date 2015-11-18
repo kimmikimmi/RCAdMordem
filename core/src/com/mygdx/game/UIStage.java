@@ -80,8 +80,8 @@ public class UIStage extends Stage {
         bbuttonActor.setY(3);
         abuttonActor.setX(599);
         abuttonActor.setY(4);
-        healthActor.setX(0);
-        healthActor.setY(450);
+        healthActor.setX(-50);
+        healthActor.setY(700);
 
         //set listeners for buttons
         leftbuttonActor.addListener(new ClickListener() {
@@ -107,7 +107,7 @@ public class UIStage extends Stage {
             @Override
             public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
                 Player.moveRight(false);
-                    hit();
+
             }
         });
         abuttonActor.addListener(new ClickListener() {
@@ -129,9 +129,11 @@ public class UIStage extends Stage {
             }
         });
     }
-    public void hit()
+
+
+    public void damagePlayer(int incomingDamage)
     {
-        health--;
+        health -= incomingDamage;
         if(health <= 2){
             healthActor.setLayerVisibility("maxHealth", false);
             if(health <= 1) {
@@ -178,5 +180,9 @@ public class UIStage extends Stage {
         winActor.setX(200);
         winActor.setY(-50); 
         gameOver();
+    }
+
+    public CompositeActor getHealthActor() {
+        return healthActor;
     }
 }

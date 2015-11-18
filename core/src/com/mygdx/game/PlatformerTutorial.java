@@ -124,10 +124,14 @@ public class PlatformerTutorial extends ApplicationAdapter {
         sceneLoader = new SceneLoader(resourceManager);
         sceneLoader.loadScene(levelName, viewport);
         root = new ItemWrapper(sceneLoader.getRoot());
+
         player = new Player(sceneLoader.world);
         root.getChild(NullConstants.PLAYER).addScript(player);
 
         uiStage = new UIStage(sceneLoader.getRm());
+
+        Health playersHealth = new Health(uiStage.getHealthActor(), player, sceneLoader, uiStage);
+        player.setHealthManager(playersHealth);
 
         sceneLoader.addComponentsByTagName(NullConstants.PLATFORM, PlatformComponent.class);
         sceneLoader.addComponentsByTagName(NullConstants.ENEMY, CollisionComponent.class);
@@ -137,7 +141,7 @@ public class PlatformerTutorial extends ApplicationAdapter {
         sceneLoader.getEngine().addSystem(new PlatformSystem());
         sceneLoader.getEngine().addSystem(new CollisionSystem(player, sceneLoader.getEngine()));
         sceneLoader.getEngine().addSystem(new BulletSystem(sceneLoader.getEngine(), player));
-        sceneLoader.getEngine().addSystem(new EnemySystem(sceneLoader.getEngine(), player));
+        sceneLoader.getEngine().addSystem(new EnemySystem(sceneLoader, player));
 
         playing = true;
         dead = false;

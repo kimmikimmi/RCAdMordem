@@ -12,6 +12,7 @@ import com.uwsoft.editor.renderer.components.TransformComponent;
 import com.uwsoft.editor.renderer.utils.ComponentRetriever;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  */
@@ -21,6 +22,7 @@ public class CollisionSystem extends IteratingSystem {
     private ImmutableArray<Entity> bulletEntities;
     private Engine engine;
     private Player player;
+    private Date elapsedTime = null;
 
     //Retrieves all platform components that match a type for management by the system.
     public CollisionSystem(Player player, Engine engine) {
@@ -60,8 +62,25 @@ public class CollisionSystem extends IteratingSystem {
 
 
             if (currentPlayerPosition.dst(collisionComponent.position) <= ((collisionComponent.width / 2) + (player.getWidth() / 2))) {
+                Date stampTime = new Date();
+                if(elapsedTime == null){
+                    elapsedTime = stampTime = new Date();
+                    damagePlayer();
+                }
+
                 System.out.println("**Collision Detected**");
+
+                Long timeSinceLastCall = (stampTime.getTime() - elapsedTime.getTime()) / 1000;
+                if(timeSinceLastCall >= 3) {
+                    damagePlayer();
+                    elapsedTime = null;
+                }
+
             }
         }
+    }
+
+    private void damagePlayer() {
+        player.getHealthManager().getDamaged(1);
     }
 }
