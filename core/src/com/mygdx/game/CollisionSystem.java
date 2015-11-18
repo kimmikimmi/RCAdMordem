@@ -60,7 +60,6 @@ public class CollisionSystem extends IteratingSystem {
 
             Vector2 currentPlayerPosition = new Vector2(player.getX(), player.getY());
 
-
             if (currentPlayerPosition.dst(collisionComponent.position) <= ((collisionComponent.width / 2) + (player.getWidth() / 2))) {
                 Date stampTime = new Date();
                 if(elapsedTime == null){

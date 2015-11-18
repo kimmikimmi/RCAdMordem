@@ -11,6 +11,7 @@ import com.uwsoft.editor.renderer.utils.ComponentRetriever;
 import javafx.util.Pair;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -24,7 +25,10 @@ public class BulletSystem extends EntitySystem {
 
     private Queue<Entity> inAirBullets;
     private Queue<Entity> inCartridgeBullets;
-//comments
+
+    private Date elapsedTime = null;
+
+    //comments
     private Player player;
     Engine engine;
     public BulletSystem(Engine engine, Player player) {
@@ -52,7 +56,18 @@ public class BulletSystem extends EntitySystem {
             updateInAirBullets(deltaTime);
         } else if(player.getShoot() && canPullTrigger() && inCartridgeBullets.size() != 0){
             System.out.println("shooting bullet");
-            createAndShoot();
+            Date stampTime = new Date();
+
+            if(elapsedTime == null){
+                elapsedTime = stampTime = new Date();
+                createAndShoot();
+            }
+
+            Long timeSinceLastCall = (stampTime.getTime() - elapsedTime.getTime()) / 1000;
+            if(timeSinceLastCall >= .25) {
+                createAndShoot();
+                elapsedTime = null;
+            }
         }
     }
 
